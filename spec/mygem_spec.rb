@@ -32,4 +32,9 @@ describe Fractnum do
         suma.should eq(Fractnum.new(7,6))
     end
     
+    it "Resta de fracciones" do
+        resta=@frac2-@frac1
+        resta.should eq(Fractnum.new(1,6))
+    end
+    
 end
