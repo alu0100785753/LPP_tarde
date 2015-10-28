@@ -1,6 +1,7 @@
 class Fractnum
 
     attr_accessor :num, :den
+    
     def initialize(x,y)
         
         @num=x
@@ -13,7 +14,7 @@ class Fractnum
         m.abs
     end
 
-    def lcm(*args)
+    def mcm(*args)
         args.inject(1) do |m, n|
             return 0 if n.zero?
             (m * n).abs / gcd(m, n)

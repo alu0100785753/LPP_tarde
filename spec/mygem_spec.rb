@@ -7,7 +7,7 @@ end
 =end
 
 describe Fractnum do
-    before :all do
+    before :each do
         
         @frac1= Fractnum.new(1,2)
         @frac2= Fractnum.new(2,3)
@@ -20,6 +20,11 @@ describe Fractnum do
     
     it "Existe un denominador" do
         @frac1.den.should eq(2)
+    end
+    
+    it "Implementado el minimo comun multiplo" do
+        @fract3=Fractnum.new(2,2)
+        @fract3.mcm(2,3).should eq(6)
     end
     
 end
