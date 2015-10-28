@@ -27,4 +27,9 @@ describe Fractnum do
         @fract3.mcm(2,3).should eq(6)
     end
     
+    it "Suma de fracciones" do
+        suma=@frac1+@frac2
+        suma.should eq(Fractnum.new(7,6))
+    end
+    
 end

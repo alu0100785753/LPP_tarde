@@ -20,5 +20,16 @@ class Fractnum
             (m * n).abs / gcd(m, n)
         end
     end
+    
+    def ==(other)
+       @num == other.num && @den == other.den 
+        
+    end
+    
+    def +(other) 
+        
+        mcm=mcm(@den,other.den)
+        Fractnum.new((mcm/@den)*@num + (mcm/other.den)*other.num,mcm)
+    end
 
 end
