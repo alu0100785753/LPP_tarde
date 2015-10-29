@@ -42,4 +42,9 @@ describe Fractnum do
         multiplicacion.should eq(Fractnum.new(2,6))
     end
     
+    it "division de fracciones" do
+        division=@frac1/@frac2
+        division.should eq(Fractnum.new(3,4))
+    end
+    
 end
