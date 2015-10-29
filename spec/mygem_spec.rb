@@ -37,4 +37,9 @@ describe Fractnum do
         resta.should eq(Fractnum.new(1,6))
     end
     
+    it "multiplicacion de fracciones" do
+        multiplicacion=@frac1*@frac2
+        multiplicacion.should eq(Fractnum.new(2,6))
+    end
+    
 end

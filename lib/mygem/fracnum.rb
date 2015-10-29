@@ -37,5 +37,10 @@ class Fractnum
         mcm=mcm(@den,other.den)
         Fractnum.new((mcm/@den)*@num - (mcm/other.den)*other.num,mcm)
     end
+    
+    def *(other) 
+        
+        Fractnum.new(@num*other.num,@den*other.den)
+    end
 
 end
