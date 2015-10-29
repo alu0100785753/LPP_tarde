@@ -47,5 +47,10 @@ class Fractnum
         
         Fractnum.new(@num*other.den,@den*other.num)
     end
+    
+    def to_s
+        
+       return "#{@num}/#{@den}" 
+    end
 
 end

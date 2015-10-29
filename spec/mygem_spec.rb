@@ -47,4 +47,9 @@ describe Fractnum do
         division.should eq(Fractnum.new(3,4))
     end
     
+    it "implementado el to_S" do
+
+        @frac1.to_s.should eq("1/2")
+    end
+    
 end
