@@ -16,6 +16,10 @@ class Referencia
     def get_autores
         @autores
     end
+    
+    def get_titulo
+       @titulo 
+    end
 
 
 
