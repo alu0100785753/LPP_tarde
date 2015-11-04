@@ -8,6 +8,7 @@ describe Referencia do
        
        @ref=Referencia.new
        @ref.set_autores("pepe","juan")
+       @ref.set_titulo("Programacion orientada a objetos")
         
     end
     
@@ -18,7 +19,7 @@ describe Referencia do
         @ref.get_autores.should eq(["pepe","juan"])
     end
     it "Debe existir un título" do
-        @ref.titulo.size.should eq(1)
+        @ref.titulo.size.should be>0
     end
     
     
