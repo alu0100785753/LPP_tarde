@@ -1,11 +1,29 @@
 require 'spec_helper'
 require 'mygem'
+
+
+describe Referencia do
+    
+    before :all do
+       
+       @ref=Referencia.new
+        
+    end
+    
+    it "La clase tiene uno o más autores" do
+        @ref.num_autores.should be >= 1
+        
+    end
+    
+end
+
+
 =begin
 describe Mygem do
    it 'requires additional testing'
 end
 =end
-
+=begin
 describe Fractnum do
     before :each do
         
@@ -55,5 +73,4 @@ describe Fractnum do
     
 end
 
-
-
+=end
