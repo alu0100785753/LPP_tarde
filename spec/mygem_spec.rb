@@ -52,4 +52,8 @@ describe Fractnum do
         @frac1.to_s.should eq("1/2")
     end
     
+    
 end
+
+
+
