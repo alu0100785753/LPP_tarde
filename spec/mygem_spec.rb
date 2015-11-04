@@ -62,6 +62,10 @@ describe Referencia do
        @ref.isbn.size.should be>0 
     end
     
+    it "Debe existir un metodo que devuelva el listado de numeros isbn" do
+        @ref.get_isbn.should eq(["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"])
+    end
+    
 end
 
 
