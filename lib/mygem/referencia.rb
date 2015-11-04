@@ -42,6 +42,9 @@ class Referencia
         @editorial
     end
 
+    def get_edicion
+        @edicion
+    end
 
 
 end

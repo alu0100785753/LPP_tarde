@@ -46,6 +46,8 @@ describe Referencia do
     end
     it "Debe existir un metodo que devuelva el numero de edicion" do
         @ref.get_edicion.should eq("Edicion 9")
+    end
+    
     
     
     
