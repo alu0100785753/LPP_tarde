@@ -1,6 +1,6 @@
 class Referencia
     
-    attr_accessor :autores, :titulo
+    attr_accessor :autores, :titulo, :serie
     
     def initialize
         "iniciado"
@@ -11,6 +11,10 @@ class Referencia
     end
     def set_titulo(tit)
        @titulo=tit 
+    end
+    
+    def set_serie(ser)
+       @serie=ser 
     end
     
     def get_autores

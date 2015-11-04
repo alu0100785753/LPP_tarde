@@ -9,6 +9,7 @@ describe Referencia do
        @ref=Referencia.new
        @ref.set_autores("pepe","juan")
        @ref.set_titulo("Programacion orientada a objetos")
+       @ref.set_serie("Empezando desde cero")
         
     end
     
