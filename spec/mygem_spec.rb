@@ -24,7 +24,9 @@ describe Referencia do
     it "Existe un metodo que devuelve el título" do
        @ref.get_titulo.should eq("Programacion orientada a objetos") 
     end
-    
+    it "Puede existir o no una serie" do
+        @ref.serie.size.should be>=0
+    end
     
 end
 
