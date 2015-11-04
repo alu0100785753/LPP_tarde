@@ -10,6 +10,9 @@ class Referencia
         @autores=aut
     end
     
+    def get_autores
+        @autores
+    end
 
 
 
