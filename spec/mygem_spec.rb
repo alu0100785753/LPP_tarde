@@ -16,6 +16,8 @@ describe Referencia do
     it "La clase tiene uno o más autores" do
         @ref.autores.size.should be >= 1
     end
+
+    
     it "Existe un metodo que nos devuelve el listado de autores" do
         @ref.get_autores.should eq(["pepe","juan"])
     end
@@ -27,6 +29,9 @@ describe Referencia do
     end
     it "Puede existir o no una serie" do
         @ref.serie.size.should be>=0
+    end
+    it "Existe un método que devuelva la serie" do
+       @ref.get_serie.should eq("Empezando desde cero") 
     end
     
 end
