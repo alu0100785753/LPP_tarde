@@ -1,6 +1,6 @@
 class Referencia
     
-    attr_accessor :autores, :titulo, :serie, :editorial,:edicion
+    attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion
     
     def initialize
         "iniciado"
@@ -24,6 +24,10 @@ class Referencia
     
     def set_edicion(nuedi)
         @edicion=nuedi
+    end
+    
+    def set_publicacion(publi)
+        @publicacion=publi
     end
     
     def get_autores

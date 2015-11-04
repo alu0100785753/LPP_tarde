@@ -12,6 +12,7 @@ describe Referencia do
        @ref.set_serie("Empezando desde cero")
        @ref.set_editorial("Santillana")
        @ref.set_edicion("Edicion 9")
+       @ref.set_publicacion("28 de enero de 1994")
         
     end
     
