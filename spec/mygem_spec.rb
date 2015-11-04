@@ -7,14 +7,16 @@ describe Referencia do
     before :all do
        
        @ref=Referencia.new
-       @ref.set_autores("pepe")
+       @ref.set_autores("pepe","juan")
         
     end
     
     it "La clase tiene uno o más autores" do
         @ref.autores.size.should be >= 1
     end
-
+    it "Existe un metodo que nos devuelve el listado de autores" do
+        @ref.get_autores.should eq(["pepe","juan"])
+    end
     
     
     

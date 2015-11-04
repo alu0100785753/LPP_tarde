@@ -9,6 +9,7 @@ class Referencia
     def set_autores (*aut)
         @autores=aut
     end
+    
 
 
 
