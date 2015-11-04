@@ -17,6 +17,9 @@ describe Referencia do
     it "Existe un metodo que nos devuelve el listado de autores" do
         @ref.get_autores.should eq(["pepe","juan"])
     end
+    it "Debe existir un título" do
+        @ref.titulo.size.should eq(1)
+    end
     
     
     
