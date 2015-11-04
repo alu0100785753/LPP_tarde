@@ -1,6 +1,6 @@
 class Referencia
     
-    attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion,:isbn
+    attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion,:isbn,:out_format
     
     def initialize
         "iniciado"
@@ -60,6 +60,26 @@ class Referencia
     
     def get_isbn
         @isbn
+    end
+    
+    
+    def out_format
+        @out_format=""
+        for x in @autores do
+           
+            @out_format+="#{x},"
+        end
+        @out_format[-1]="\n"
+        @out_format+=@titulo+"\n"+@serie+"\n"+@editorial+"; "+@edicion+", "+@publicacion+"\n"
+        for x in @isbn do
+           
+            @out_format+="#{x}\n"
+        end
+        @out_format[-1]=""
+        
+       @out_format
+       
+       
     end
     
     
