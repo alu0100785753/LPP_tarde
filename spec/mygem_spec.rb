@@ -48,7 +48,9 @@ describe Referencia do
         @ref.get_edicion.should eq("Edicion 9")
     end
     
-    
+    it "Debe existir una fecha de publicacion" do
+       @ref.publicacion.size.should be>0 
+    end
     
     
 end
