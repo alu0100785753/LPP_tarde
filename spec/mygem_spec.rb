@@ -13,6 +13,7 @@ describe Referencia do
        @ref.set_editorial("Santillana")
        @ref.set_edicion("Edicion 9")
        @ref.set_publicacion("28 de enero de 1994")
+       @ref.set_isbn("ISBN-13: 978-1937785499, ISBN-10: 1937785491")
         
     end
     

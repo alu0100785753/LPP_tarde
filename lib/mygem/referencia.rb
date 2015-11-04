@@ -1,6 +1,6 @@
 class Referencia
     
-    attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion
+    attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion,:isbn
     
     def initialize
         "iniciado"
@@ -28,6 +28,10 @@ class Referencia
     
     def set_publicacion(publi)
         @publicacion=publi
+    end
+    
+    def set_isbn(*nums)
+        @isbn=nums
     end
     
     def get_autores
