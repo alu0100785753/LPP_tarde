@@ -5,6 +5,11 @@ class Referencia
     def initialize
         "iniciado"
     end
+    
+    def set_autores (*aut)
+        @autores=aut
+    end
+
 
 
 end

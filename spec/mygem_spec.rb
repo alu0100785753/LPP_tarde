@@ -7,13 +7,16 @@ describe Referencia do
     before :all do
        
        @ref=Referencia.new
+       @ref.set_autores("pepe")
         
     end
     
     it "La clase tiene uno o más autores" do
-        @ref.num_autores.should be >= 1
-        
+        @ref.autores.size.should be >= 1
     end
+
+    
+    
     
 end
 
