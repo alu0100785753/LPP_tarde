@@ -53,6 +53,9 @@ describe Referencia do
        @ref.publicacion.size.should be>0 
     end
     
+    it "Debe existir un metodo que devuelva la fecha de publicacion" do
+        @ref.get_publicacion.should eq("28 de enero de 1994")
+    end
     
 end
 
