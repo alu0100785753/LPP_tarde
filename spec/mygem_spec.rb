@@ -33,6 +33,10 @@ describe Referencia do
     it "Existe un método que devuelva la serie" do
        @ref.get_serie.should eq("Empezando desde cero") 
     end
+    it "Debe existir una editorial" do
+       @ref.editorial.size.should be>0
+    end
+    
     
 end
 
