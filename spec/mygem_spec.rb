@@ -40,7 +40,9 @@ describe Referencia do
     it "Existe un metodo que devuelve la editorial" do
         @ref.get_editorial.should eq("Santillana")
     end
-    
+    it "Debe existir un numero de edicion" do
+       @ref.edicion.size.should be>0 
+    end
     
     
     
