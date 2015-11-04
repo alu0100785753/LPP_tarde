@@ -11,6 +11,7 @@ describe Referencia do
        @ref.set_titulo("Programacion orientada a objetos")
        @ref.set_serie("Empezando desde cero")
        @ref.set_editorial("Santillana")
+       @ref.set_edicion("Edicion 9")
         
     end
     
