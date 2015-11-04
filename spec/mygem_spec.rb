@@ -10,6 +10,7 @@ describe Referencia do
        @ref.set_autores("pepe","juan")
        @ref.set_titulo("Programacion orientada a objetos")
        @ref.set_serie("Empezando desde cero")
+       @ref.set_editorial("Santillana")
         
     end
     
@@ -36,6 +37,9 @@ describe Referencia do
     it "Debe existir una editorial" do
        @ref.editorial.size.should be>0
     end
+    
+    
+    
     
     
 end
