@@ -58,6 +58,10 @@ class Referencia
         @publicacion
     end
     
+    def get_isbn
+        @isbn
+    end
+    
     
 
 
