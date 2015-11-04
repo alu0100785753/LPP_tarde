@@ -57,6 +57,10 @@ describe Referencia do
         @ref.get_publicacion.should eq("28 de enero de 1994")
     end
     
+    it "Debe existir un numero de isbn" do
+       @ref.isbn.size.should be>0 
+    end
+    
 end
 
 
