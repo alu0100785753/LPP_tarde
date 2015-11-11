@@ -94,8 +94,17 @@ describe List do
        lista=List.new
        lista.push(6)
        lista.push(7)
-       lista.pop.should eq(6) 
+       lista.pop.should eq(6)
+       lista.pop.should eq(7)
     end
+    it "Existe un metodo que devuelve la cabeza de la lista" do
+       lista=List.new
+       lista.push(6)
+       lista.push(7)
+       lista.head.should eq(6) 
+       lista.head.should eq(6)
+    end
+    
     
     
 end
