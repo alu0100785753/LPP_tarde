@@ -2,6 +2,51 @@ require 'spec_helper'
 require 'mygem'
 
 
+describe Node do
+    it "Se crea un nodo con su valor y su siquiente" do
+        nodo=Node.new(1,2)
+        nodo.value.should eq(1)
+        nodo.next.should eq(2)
+    end
+end
+
+describe List do
+    
+    before :all do
+        @lista=List.new
+    end
+    
+    it "Se pueden insertar elementos en la lista" do
+       lista=List.new
+       lista.push(5)
+       lista.ini.value.should_not eql(nil) 
+    end
+    it "Se pueden insertar elementos en la lista" do
+       lista=List.new
+       lista.push(6)
+       lista.push(7)
+       lista.pop.should eq(6)
+       lista.pop.should eq(7)
+    end
+    it "Existe un metodo que devuelve la cabeza de la lista" do
+       lista=List.new
+       lista.push(6)
+       lista.push(7)
+       lista.head.should eq(6) 
+       lista.head.should eq(6)
+    end
+    
+    it "Existe un metodo que permite introducir varios elementos" do
+       lista=List.new
+       lista.push_var(6,7,8)
+       lista.pop.should eq(6) 
+       lista.pop.should eq(7)
+       lista.pop.should eq(8)
+    end
+end
+
+
+=begin
 describe Referencia do
     
     before :all do
@@ -70,51 +115,7 @@ describe Referencia do
        @ref.out_format.should eq("pepe,juan\nProgramacion orientada a objetos\nEmpezando desde cero\nSantillana; Edicion 9, 28 de enero de 1994\nISBN-13: 978-1937785499\nISBN-10: 1937785491")
     end
 end
-
-describe Node do
-    it "Se crea un nodo con su valor y su siquiente" do
-        nodo=Node.new(1,2)
-        nodo.value.should eq(1)
-        nodo.next.should eq(2)
-    end
-end
-
-describe List do
-    
-    before :all do
-        @lista=List.new
-    end
-    
-    it "Se pueden insertar elementos en la lista" do
-       lista=List.new
-       lista.push(5)
-       lista.ini.value.should_not eql(nil) 
-    end
-    it "Se pueden insertar elementos en la lista" do
-       lista=List.new
-       lista.push(6)
-       lista.push(7)
-       lista.pop.should eq(6)
-       lista.pop.should eq(7)
-    end
-    it "Existe un metodo que devuelve la cabeza de la lista" do
-       lista=List.new
-       lista.push(6)
-       lista.push(7)
-       lista.head.should eq(6) 
-       lista.head.should eq(6)
-    end
-    
-    it "Existe un metodo que permite introducir varios elementos" do
-       lista=List.new
-       lista.push_var(6,7,8)
-       lista.pop.should eq(6) 
-       lista.pop.should eq(7)
-       lista.pop.should eq(8)
-    end
-    
-    
-end
+=end
 
 
 
