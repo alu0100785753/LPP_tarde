@@ -27,4 +27,8 @@ class List
     return aux.value
   end
   
+  def head
+    return @ini.value
+  end
+  
 end

@@ -105,6 +105,13 @@ describe List do
        lista.head.should eq(6)
     end
     
+    it "Existe un metodo que permite introducir varios elementos" do
+       lista=List.new
+       lista.push_var(6,7,8)
+       lista.pop.should eq(6) 
+       lista.pop.should eq(7)
+       lista.pop.should eq(8)
+    end
     
     
 end
