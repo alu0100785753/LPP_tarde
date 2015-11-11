@@ -69,10 +69,20 @@ describe Referencia do
     it "Existe un metodo que devuelve la salida formateada" do
        @ref.out_format.should eq("pepe,juan\nProgramacion orientada a objetos\nEmpezando desde cero\nSantillana; Edicion 9, 28 de enero de 1994\nISBN-13: 978-1937785499\nISBN-10: 1937785491")
     end
+end
+
+describe Node do
     
     
+    it "Se crea un nodo con su valor y su siquiente" do
+        nodo=Node.new(1,2)
+        nodo.value.should eq(1)
+        nodo.next.should eq(2)
+    end
     
 end
+
+
 
 
 =begin
