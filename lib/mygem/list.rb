@@ -18,13 +18,11 @@ class List
   end
   
   def push_var(*elementos)
-      puts elementos
     if @ini.value == nil
       @ini.value= elementos[0]
       elementos.shift
       aux=@ini
       for x in elementos
-        puts "x=#{x}"
         aux.next= Node.new(x,nil)
         aux=aux.next
       end
@@ -34,7 +32,6 @@ class List
         aux=aux.next
       end
       for x in elementos
-        puts "x=#{x}"
         aux.next= Node.new(x,nil)
         aux=aux.next
       end

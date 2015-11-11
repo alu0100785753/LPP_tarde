@@ -14,6 +14,25 @@ describe List do
     
     before :all do
         @lista=List.new
+        
+        @ref1=Referencia.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers' Guide.","(The Facets of Ruby).","Pragmatic Bookshelf","4 edition","(July 7, 2013)",
+        ["ISBN-13: 978-1937785499","ISBN-10: 1937785491"])
+        
+        @ref2=Referencia.new(["Scott Chacon"],"Pro Git 2009th Edition.","(Pro).","Apress","2009 edition","(August 27, 2009)",
+        ["ISBN-13: 9781430218333","ISBN-10: 1430218339"])
+        
+        @ref3=Referencia.new(["David Flanagan", "Yukihiro Matsumoto"],"The Ruby Programming Language.","","O’Reilly Media","1 edition","(February 4, 2008)",
+        ["ISBN-10: 0596516177","ISBN-13: 978-0596516178"])
+        
+        @ref4=Referencia.new(["David Chelimsky", "Dave Astels", "Bryan Helmkamp", "Dan North", "Zach Dennis", "Aslak Hellesoy"],"The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends","(The Facets of Ruby)","Pragmatic Bookshelf","1 edition","(December 25, 2010)",
+        ["ISBN-10: 1934356379","ISBN-13: 978-1934356371"])
+        
+        @ref5=Referencia.new(["Richard E"],"Silverman Git Pocket Guide",".","O’Reilly Media","1 edition","(August 2, 2013)",
+        ["ISBN-10: 1449325866","ISBN-13: 978-1449325862"])
+        
+        @lista.push_var(@ref1,@ref2,@ref3,@ref4,@ref5)
+
+        
     end
     
     it "Se pueden insertar elementos en la lista" do
@@ -42,6 +61,12 @@ describe List do
        lista.pop.should eq(6) 
        lista.pop.should eq(7)
        lista.pop.should eq(8)
+    end
+    it "Extrayendo referencias" do
+        @lista.pop.out_format.should eq("Dave Thomas,Andy Hunt,Chad Fowler\nProgramming Ruby 1.9 & 2.0: The Pragmatic Programmers' Guide.\n(The Facets of Ruby).\nPragmatic Bookshelf; 4 edition, (July 7, 2013)\nISBN-13: 978-1937785499\nISBN-10: 1937785491")
+        
+        @lista.pop.out_format.should eq("Scott Chacon\nPro Git 2009th Edition.\n(Pro).\nApress; 2009 edition, (August 27, 2009)\nISBN-13: 9781430218333\nISBN-10: 1430218339")
+
     end
 end
 
