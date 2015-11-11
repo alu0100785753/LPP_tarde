@@ -72,16 +72,25 @@ describe Referencia do
 end
 
 describe Node do
-    
-    
     it "Se crea un nodo con su valor y su siquiente" do
         nodo=Node.new(1,2)
         nodo.value.should eq(1)
         nodo.next.should eq(2)
     end
-    
 end
 
+describe List do
+    
+    before :all do
+        @lista=List.new
+    end
+    
+    it "Se pueden insertar elementos en la lista" do
+       @lista.push(5)
+       @lista.ini.value.should_not eql(nil) 
+    end
+    
+end
 
 
 
