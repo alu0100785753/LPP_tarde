@@ -86,9 +86,17 @@ describe List do
     end
     
     it "Se pueden insertar elementos en la lista" do
-       @lista.push(5)
-       @lista.ini.value.should_not eql(nil) 
+       lista=List.new
+       lista.push(5)
+       lista.ini.value.should_not eql(nil) 
     end
+    it "Se pueden insertar elementos en la lista" do
+       lista=List.new
+       lista.push(6)
+       lista.push(7)
+       lista.pop.should eq(6) 
+    end
+    
     
 end
 

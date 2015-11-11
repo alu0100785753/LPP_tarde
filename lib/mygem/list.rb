@@ -16,5 +16,4 @@ class List
       aux.next= Node.new(elemento,nil)
     end
   end
-
 end
