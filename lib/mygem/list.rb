@@ -16,4 +16,15 @@ class List
       aux.next= Node.new(elemento,nil)
     end
   end
+  
+  def pop
+    aux=@ini
+    if aux.next==nil
+      @ini=Node.new(nil,nil)
+    else
+      @ini=aux.next
+    end
+    return aux.value
+  end
+  
 end
