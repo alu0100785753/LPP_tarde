@@ -1,6 +1,6 @@
 class List_d
 
-  attr_accessor :ini
+  attr_accessor :ini,:fin
   def initialize
     @ini=Node.new(nil,nil)
   end
