@@ -1,7 +1,17 @@
 require 'spec_helper'
 require 'mygem'
 
+describe Node_d do
+    it "Se crea un nodo con su valor, su previo y su siquiente" do
+        nodo_doble=Node_d.new(1,2,3)
+        expect(nodo_doble.prev).to eq(1)
+        expect(nodo_doble.value).to eq(2)
+        expect(nodo_doble.next).to eq(3)
+    end
+end
 
+
+=begin
 describe Node do
     it "Se crea un nodo con su valor y su siquiente" do
         nodo=Node.new(1,2)
@@ -69,7 +79,7 @@ describe List do
 
     end
 end
-
+=end
 
 =begin
 describe Referencia do
