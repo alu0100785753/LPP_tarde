@@ -10,7 +10,15 @@ describe Node_d do
     end
 end
 
-
+describe List_d do
+   it "existe una lista que contenga el primer y el último elemento" do
+      lista_doble=List_d.new
+      lista_doble.ini=1
+      lista_doble.fin=2
+      expect(lista_doble.ini).to eq(1)
+      expect(lista_doble.fin).to eq(2)
+  end
+end
 =begin
 describe Node do
     it "Se crea un nodo con su valor y su siquiente" do
