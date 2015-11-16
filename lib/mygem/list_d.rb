@@ -91,6 +91,17 @@ class List_d
     valor
     
   end
+  
+  def pop_fin
+    
+    valor=@fin
+    
+    @fin=@fin.prev
+    @fin.next=nil
+    
+    valor
+    
+  end
 
   def to_s
     aux=@ini
