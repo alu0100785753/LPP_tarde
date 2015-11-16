@@ -22,8 +22,18 @@ describe List_d do
   it "Existe una función que nos devuelve si la lista está vacia" do
       
       lista_doble=List_d.new
-      expect(lista_doble.lista_vacia).to eq(true)
+      expect(lista_doble.lista_vacia).to be true 
       
+  end
+  
+  it "debe existir un método para insertar uno o más elementos al final de la lista" do
+      lista_doble=List_d.new
+      lista_doble.push_fin(1)
+      lista_doble.push_fin(2,3)
+      lista_doble.push_fin(4,5,6)
+      expect(lista_doble.ini.value).to eq(1)
+      expect(lista_doble.fin.value).to eq(6)
+      expect(lista_doble.to_s).to eq("1->2->3->4->5->6")
   end
   
 end

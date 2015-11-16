@@ -10,51 +10,18 @@ class List_d
     @ini==nil && @fin==nil
   end
 
-  def push(elemento)
-    if @ini.value == nil
-      @ini.value= elemento
-    else
-      aux=@ini
-      while aux.next != nil do
-        aux=aux.next
-      end
-      aux.next= Node.new(elemento,nil)
-    end
-  end
-
-  def push_var(*elementos)
-    if @ini.value == nil
-      @ini.value= elementos[0]
-      elementos.shift
-      aux=@ini
-      for x in elementos
-        aux.next= Node.new(x,nil)
-        aux=aux.next
-      end
-    else
-      aux=@ini
-      while aux.next != nil do
-        aux=aux.next
-      end
-      for x in elementos
-        aux.next= Node.new(x,nil)
-        aux=aux.next
-      end
-    end
-  end
-
-  def pop
+  def to_s
     aux=@ini
-    if aux.next==nil
-      @ini=Node.new(nil,nil)
-    else
-      @ini=aux.next
+    cadena=""
+    while aux!=nil do
+      
+      cadena+="#{aux.value}"
+      if aux.next != nil
+        cadena+="->"
+      end
+      aux=aux.next
+      
     end
-    return aux.value
+    cadena
   end
-  
-  def head
-    return @ini.value
-  end
-
 end
