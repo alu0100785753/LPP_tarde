@@ -6,9 +6,49 @@ class List_d
     @fin=nil
   end
   
+  
   def lista_vacia
     @ini==nil && @fin==nil
   end
+  
+  
+  def push_fin(*elemento)
+    # Si la lista está vacía
+    if lista_vacia 
+      @ini=Node_d.new(nil,elemento[0],nil)
+      @fin=@ini
+      
+      elemento.shift
+      aux=@ini
+      for x in elemento
+        aux.next=Node_d.new(aux,x,nil)
+        aux=aux.next
+      end
+      @fin=aux
+      
+    # Si en la lista solo existe un elemento
+    elsif @fin==@ini
+      nuevo=Node_d.new(@ini,elemento[0],nil)
+      @fin=nuevo
+      @ini.next=@fin
+      elemento.shift
+      aux=@fin
+      for x in elemento
+        aux.next=Node_d.new(aux,x,nil)
+        aux=aux.next
+      end
+      @fin=aux
+    #cuando hay más de un elemento en la lista
+    else
+      aux=@fin
+      for x in elemento
+        aux.next=Node_d.new(aux,x,nil)
+        aux=aux.next
+      end
+      @fin=aux
+    end
+  end
+  
 
   def to_s
     aux=@ini
