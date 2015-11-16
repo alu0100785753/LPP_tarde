@@ -37,7 +37,7 @@ describe List_d do
   it "debe existir un método para insertar uno o más elementos al principio de la lista" do
       lista_doble=List_d.new
       lista_doble.push_ini(6)
-      lista_doble.ini(4,5)
+      lista_doble.push_ini(4,5)
       lista_doble.push_ini(1,2,3)
       expect(lista_doble.to_s).to eq("1->2->3->4->5->6")
   end

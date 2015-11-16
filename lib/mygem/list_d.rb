@@ -49,6 +49,40 @@ class List_d
     end
   end
   
+  def push_ini(*elemento)
+    if lista_vacia 
+      @ini=Node_d.new(nil,elemento[0],nil)
+      @fin=@ini
+      
+      elemento.shift
+      aux=@ini
+      for x in elemento
+        aux.next=Node_d.new(aux,x,nil)
+        aux=aux.next
+      end
+      @fin=aux
+      
+      
+    else
+    
+      aux=@ini
+      @ini=Node_d.new(nil,elemento[0],nil)
+      elemento.shift
+
+      aux2=@ini
+      i=0
+      while i<elemento.size-1 do
+        
+        aux2.next=Node_d.new(aux2,elemento[i],nil)
+        aux2=aux2.next
+        i+=1
+      end
+      aux2.next=Node_d.new(aux2,elemento[i],aux)
+      
+    end
+  end
+  
+  
 
   def to_s
     aux=@ini
