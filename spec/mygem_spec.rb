@@ -47,8 +47,13 @@ describe List_d do
       lista_doble.push_fin(1,2,3)
       lista_doble.pop_ini
       expect(lista_doble.to_s).to eq("2->3")
-      
-      
+  end
+  
+  it "debe existir un método para extraer un elemento al principio de la lista" do
+      lista_doble=List_d.new
+      lista_doble.push_fin(1,2,3)
+      lista_doble.pop_fin
+      expect(lista_doble.to_s).to eq("1->2")
   end
   
   
