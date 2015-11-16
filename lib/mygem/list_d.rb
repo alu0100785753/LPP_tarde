@@ -82,7 +82,15 @@ class List_d
     end
   end
   
-  
+  def pop_ini
+    
+    valor=@ini.value
+    @ini=@ini.next
+    @ini.prev=nil
+    
+    valor
+    
+  end
 
   def to_s
     aux=@ini
