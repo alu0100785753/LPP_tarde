@@ -11,13 +11,21 @@ describe Node_d do
 end
 
 describe List_d do
-   it "existe una lista que contenga el primer y el último elemento" do
-      lista_doble=List_d.new
-      lista_doble.ini=1
-      lista_doble.fin=2
-      expect(lista_doble.ini).to eq(1)
-      expect(lista_doble.fin).to eq(2)
+  it "existe una lista que contenga el primer y el último elemento" do
+    lista_doble=List_d.new
+    lista_doble.ini=1
+    lista_doble.fin=2
+    expect(lista_doble.ini).to eq(1)
+    expect(lista_doble.fin).to eq(2)
   end
+  
+  it "Existe una función que nos devuelve si la lista está vacia" do
+      
+      lista_doble=List_d.new
+      expect(lista_doble.lista_vacia).to eq(true)
+      
+  end
+  
 end
 =begin
 describe Node do

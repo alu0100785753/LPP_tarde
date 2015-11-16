@@ -2,7 +2,8 @@ class List_d
 
   attr_accessor :ini,:fin
   def initialize
-    @ini=Node.new(nil,nil)
+    @ini=nil
+    @fin=nil
   end
 
   def push(elemento)
