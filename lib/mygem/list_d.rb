@@ -5,6 +5,10 @@ class List_d
     @ini=nil
     @fin=nil
   end
+  
+  def lista_vacia
+    @ini==nil && @fin==nil
+  end
 
   def push(elemento)
     if @ini.value == nil
