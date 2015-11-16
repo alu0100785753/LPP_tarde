@@ -31,10 +31,18 @@ describe List_d do
       lista_doble.push_fin(1)
       lista_doble.push_fin(2,3)
       lista_doble.push_fin(4,5,6)
-      expect(lista_doble.ini.value).to eq(1)
-      expect(lista_doble.fin.value).to eq(6)
       expect(lista_doble.to_s).to eq("1->2->3->4->5->6")
   end
+  
+  it "debe existir un método para insertar uno o más elementos al principio de la lista" do
+      lista_doble=List_d.new
+      lista_doble.push_ini(6)
+      lista_doble.ini(4,5)
+      lista_doble.push_ini(1,2,3)
+      expect(lista_doble.to_s).to eq("1->2->3->4->5->6")
+  end
+  
+  
   
 end
 =begin
