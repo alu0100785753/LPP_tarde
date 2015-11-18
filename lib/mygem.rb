@@ -6,6 +6,7 @@ require 'mygem/node'
 require 'mygem/list'
 require 'mygem/list_d'
 require 'mygem/libro'
+require 'mygem/pub_periodicas'
 
 
 module Mygem
