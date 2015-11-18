@@ -6,12 +6,12 @@ class Referencia
         
         if args.length==7
         @autores=args[0]
-        @titulo=args[0]
-        @serie=args[0]
-        @editorial=args[0]
-        @edicion=args[0]
-        @publicacion=args[0]
-        @isbn=args[0]
+        @titulo=args[1]
+        @serie=args[2]
+        @editorial=args[3]
+        @edicion=args[4]
+        @publicacion=args[5]
+        @isbn=args[6]
         end
         
     end
