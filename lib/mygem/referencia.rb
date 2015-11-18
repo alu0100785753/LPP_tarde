@@ -2,14 +2,17 @@ class Referencia
     
     attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion,:isbn,:out_format
     
-    def initialize(aut,tit,ser,edit,nuedi,publi,nums)
-        @autores=aut
-        @titulo=tit
-        @serie=ser
-        @editorial=edit
-        @edicion=nuedi
-        @publicacion=publi
-        @isbn=nums
+    def initialize(*args)
+        
+        if args.length==7
+        @autores=args[0]
+        @titulo=args[0]
+        @serie=args[0]
+        @editorial=args[0]
+        @edicion=args[0]
+        @publicacion=args[0]
+        @isbn=args[0]
+        end
         
     end
     
@@ -87,8 +90,4 @@ class Referencia
        
        
     end
-    
-    
-
-
 end

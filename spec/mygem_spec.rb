@@ -55,10 +55,19 @@ describe List_d do
       lista_doble.pop_fin
       expect(lista_doble.to_s).to eq("1->2")
   end
-  
-  
-  
 end
+
+describe Libro do
+    
+   
+   it "La clase libro hereda de la clase Referencia" do
+       
+       expect(Libro.superclass).to eq(Referencia)
+   end
+    
+end
+
+
 =begin
 describe Node do
     it "Se crea un nodo con su valor y su siquiente" do
