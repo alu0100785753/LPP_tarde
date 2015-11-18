@@ -67,6 +67,16 @@ describe Libro do
     
 end
 
+describe Publicaciones_periodicas do
+    
+   
+   it "La clase libro hereda de la clase Referencia" do
+       
+       expect(Publicaciones_periodicas.superclass).to eq(Referencia)
+   end
+    
+end
+
 
 =begin
 describe Node do
