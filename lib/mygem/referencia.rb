@@ -90,5 +90,7 @@ class Referencia
        
        
     end
-
+    def <=>(other)
+        autores <=> other.autores
+    end
 end
