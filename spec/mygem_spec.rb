@@ -1,6 +1,55 @@
 require 'spec_helper'
 require 'mygem'
 
+
+
+describe Referencia do
+    
+   before :all do
+       
+       @ref1=Referencia.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers' Guide.","(The Facets of Ruby).","Pragmatic Bookshelf","4 edition","(July 7, 2013)",
+        ["ISBN-13: 978-1937785499","ISBN-10: 1937785491"])
+        
+        @ref2=Referencia.new(["Scott Chacon"],"Pro Git 2009th Edition.","(Pro).","Apress","2009 edition","(August 27, 2009)",
+        ["ISBN-13: 9781430218333","ISBN-10: 1430218339"])
+        
+        @ref3=Referencia.new(["David Flanagan", "Yukihiro Matsumoto"],"The Ruby Programming Language.","","O’Reilly Media","1 edition","(February 4, 2008)",
+        ["ISBN-10: 0596516177","ISBN-13: 978-0596516178"])
+        
+        @ref4=Referencia.new(["David Chelimsky", "Dave Astels", "Bryan Helmkamp", "Dan North", "Zach Dennis", "Aslak Hellesoy"],"The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends","(The Facets of Ruby)","Pragmatic Bookshelf","1 edition","(December 25, 2010)",
+        ["ISBN-10: 1934356379","ISBN-13: 978-1934356371"])
+        
+        @ref5=Referencia.new(["Richard E"],"Silverman Git Pocket Guide",".","O’Reilly Media","1 edition","(August 2, 2013)",
+        ["ISBN-10: 1449325866","ISBN-13: 978-1449325862"])
+       
+   end
+   
+   
+   it "La referencia 1 es menor que la referencia 2" do
+      expect(@ref1 < @ref2).to eq(true)
+    end
+    it "La referencia 1 es menor o igual que la referencia 2" do
+      expect(@ref1 <= @ref2).to eq(true)
+    end
+    it "La referencia 2 es mayor que la referencia 1" do
+      expect(@ref2 > @ref1).to eq(true)
+    end
+    it "La referencia 2 es mayor o igual que la referencia 1" do
+      expect(@ref2 >= @ref1).to eq(true)
+    end
+
+    it "La referencia 1 es igual que la referencia 1" do
+      expect(@ref1 == @ref1).to eq(true)
+    end
+
+    it "La referencia 1 es distinta que la referencia 2" do
+      expect(@ref1 == @ref2).to eq(false)
+    end
+
+end
+
+
+=begin
 describe Node_d do
     it "Se crea un nodo con su valor, su previo y su siquiente" do
         nodo_doble=Node_d.new(1,2,3)
@@ -64,7 +113,14 @@ describe Libro do
        
        expect(Libro.superclass).to eq(Referencia)
    end
-    
+   
+   it "instancia de Libro" do
+       
+       expect(Libro.new.instance_of?Libro).to eq(true)
+       expect(Libro.new.is_a?(Referencia)).to eq(true)
+   
+   end
+   
 end
 
 describe Publicaciones_periodicas do
@@ -77,7 +133,19 @@ describe Publicaciones_periodicas do
     
 end
 
+def show (a_class)
 
+if (a_class != nil) then
+
+puts "#{a_class}:: es hija de = #{a_class.superclass}"
+
+show(a_class.superclass)
+end
+end
+
+show(Referencia)
+
+=end
 =begin
 describe Node do
     it "Se crea un nodo con su valor y su siquiente" do

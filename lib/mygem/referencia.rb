@@ -1,5 +1,5 @@
 class Referencia
-    
+    include Comparable
     attr_accessor :autores, :titulo, :serie, :editorial,:edicion,:publicacion,:isbn,:out_format
     
     def initialize(*args)
@@ -90,4 +90,5 @@ class Referencia
        
        
     end
+
 end
