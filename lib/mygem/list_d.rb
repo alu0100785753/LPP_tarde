@@ -1,5 +1,5 @@
 class List_d
-
+  include Enumerable
   attr_accessor :ini,:fin
   def initialize
     @ini=nil
@@ -116,6 +116,14 @@ class List_d
       
     end
     cadena
+  end
+  
+  def each
+    aux=@ini
+    while aux !=nil 
+      yield aux.value
+      aux=aux.next
+    end
   end
   
 end
