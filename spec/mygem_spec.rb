@@ -99,7 +99,6 @@ describe List_d do
       expect(@lista.sort).to eq([@ref1,@ref4,@ref3,@ref5,@ref2])
     end
     
-
 end
 
 
