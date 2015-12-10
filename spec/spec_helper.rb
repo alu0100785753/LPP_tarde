@@ -15,6 +15,6 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
   require 'coveralls'
-Coveralls.wear!
+  Coveralls.wear!
 
 end
