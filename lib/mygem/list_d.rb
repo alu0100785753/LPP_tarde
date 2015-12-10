@@ -95,9 +95,14 @@ class List_d
   def pop_fin
     
     valor=@fin
-    
-    @fin=@fin.prev
-    @fin.next=nil
+    if @fin.prev!=nil
+      @fin=@fin.prev
+      @fin.next=nil
+    else
+      @fin=nil
+      @ini=nil
+    end
+      
     
     valor
     
@@ -108,7 +113,7 @@ class List_d
     cadena=""
     while aux!=nil do
       
-      cadena+="#{aux.value}"
+      cadena+="#{aux.value.to_s}"
       if aux.next != nil
         cadena+="->"
       end
@@ -124,6 +129,7 @@ class List_d
       yield aux.value
       aux=aux.next
     end
+    
   end
   
 end

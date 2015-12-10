@@ -73,6 +73,7 @@ class Referencia
     end
     
     def out_format
+        puts "out of format"
         @out_format=""
         for x in @autores do
            
@@ -90,7 +91,72 @@ class Referencia
        
        
     end
-    def <=>(other)
-        autores <=> other.autores
+    
+    def to_s
+        @out_format=""
+        for x in @autores do
+           
+            @out_format+="Autor: #{x},"
+        end
+        @out_format[-1]="."
+        @out_format+="(#{@publicacion[-5...-1]}). Título: #{@titulo.capitalize} (#{@edicion}) (#{@serie}). Lugar de publicacion: #{@editorial}\n"
+        
+        @out_format
+       
+       
     end
+    
+    
+    
+    
+    def <=>(other)
+        
+        if @autores==other.autores
+        
+            if @publicacion[-5...-1]==other.publicacion[-5...-1]
+                
+                @titulo<=>other.titulo
+                
+            else
+                @publicacion[-5...-1]<=>other.publicacion[-5...-1]
+            end
+        else
+            @autores <=> other.autores
+        end
+    end
+    
+    
+    def to_apa
+        
+        
+        #Poner nombre en lugar de apellidos
+        
+        vector=[]
+        
+        for y in @autores do
+            nombre=""
+            apellido=""
+            n=true
+            
+            for i in 0..y.size-1 do
+            
+                if y[i]!=" " && n==true
+                    nombre+=y[i]
+                elsif y[i]==" "
+                    n=false
+                else
+                    apellido+=y[i]
+                    
+                end
+                i+=1
+            end
+            vector.push(apellido+" "+nombre)
+        end
+        @autores=vector
+    
+
+    
+    end
+
+    
 end

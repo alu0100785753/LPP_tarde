@@ -2,7 +2,55 @@ require 'spec_helper'
 require 'mygem'
 
 
+describe Bibliografia do
+    
+    before :all do
+        
+        @clase= Bibliografia.new
 
+        @ref1=Referencia.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"],"programming Ruby 1.9 & 2.0: The Pragmatic Programmers' Guide.","The Facets of Ruby.","Pragmatic Bookshelf","4 edition","(July 7, 2013)",
+                ["ISBN-13: 978-1937785499","ISBN-10: 1937785491"])
+        
+        @ref2=Referencia.new(["Scott Chacon"],"pro Git 2009th Edition.","Pro.","Apress","2009 edition","(August 27, 2009)",
+                ["ISBN-13: 9781430218333","ISBN-10: 1430218339"])
+                
+        @ref3=Referencia.new(["Scott Chacon"],"pro Git 2009th Edition.","Pro.","Apress","2008 edition","(August 27, 2008)",
+                ["ISBN-13: 9781430218333","ISBN-10: 1430218339"])
+        @ref4=Referencia.new(["Scott Chacon"],"profesional Git 2009th Edition.","Pro.","Apress","2009 edition","(August 27, 2009)",
+                ["ISBN-13: 9781430218333","ISBN-10: 1430218339"])
+                
+        @clase.push_fin(@ref1,@ref2,@ref3,@ref4)
+
+        @clase.to_apa
+        puts "clase", @clase
+        
+    end
+    
+    it "Se pone primero el apellido y luego el nombre" do
+        
+        expect(@clase.ini.value.autores[0]).to eq("Chacon Scott")
+        
+    end
+    
+    it "Se ordenan las referencias por orden albabético de los apellidos de los autores" do
+       
+       expect(@ref1>=@ref2).to eq(true) 
+        
+    end
+    
+    it "Cuando los autores son los mismos se ordenan por año de publicación" do
+       expect(@ref2>=@ref3).to eq(true)
+    end
+    
+    it "Cuando los años de publicación son los mismos se ordenan por título" do
+       expect(@ref4>=@ref2).to eq(true)
+    end
+
+
+
+end
+
+=begin
 describe Referencia do
     
    before :all do
@@ -101,8 +149,20 @@ describe List_d do
     
 end
 
+=end
+=begin
+def show (a_class)
 
+    if (a_class != nil) then
 
+        puts "#{a_class}:: es hija de = #{a_class.superclass}"
+
+        show(a_class.superclass)
+    end
+end
+
+show(Referencia)
+=end
 
 =begin
 describe Node_d do
